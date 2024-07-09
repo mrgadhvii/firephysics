@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Page</title>
+   
+
+<style>
+    .button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #000000;
+  left: 35%;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+a {
+    text-decoration: none;
+}
+.button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: white;
+}
+
+.button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+</style>
+
+<style>
+    /* === removing default button style ===*/
+.buttonpma {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  animation: r1 3s ease-in-out infinite;
+ /*linear*/
+  border: 7px #056bfa21 solid;
+  border-radius: 14px;
+}
+
+/* button styling */
+.buttonpma {
+  --border-right: 6px;
+  --text-stroke-color: rgba(85, 87, 255, 0.78);
+  --animation-color: #056bfa;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 1.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+  animation: r2 2s ease-in-out infinite;
+}
+
+.input {
+  color: black;
+  border: 2px solid #8707ff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  width: 200px ;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.input:active {
+  box-shadow: 2px 2px 15px #8707ff inset;
+}
+
+/* hover */
+.buttonpma:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 70px var(--animation-color))
+}
+
+@keyframes r1 {
+  50% {
+    transform: rotate(-1deg) rotateZ(-10deg);
+  }
+}
+
+@keyframes r2 {
+  50% {
+    transform: rotateX(-65deg);
+  }
+}
+</style>
+</head>
+<body>
+<br>
+  
+   
+
+<input type="password" id="password" class="input" placeholder="Enter Password" > <br> <br>
+        <button id="passwordAuth" class="button" style="margin-left: -20px;">Login via pass.</button>
+
+    <footer style="color: gray;"><br>If getting any error, Report it on  <a href="https://t.me/MRGADHVIIBOT" style="color: blue; opacity: 80%;">@FIREPHYSICS </a></footer>
+
+    <script>
+      document.getElementById('passwordAuth').addEventListener('click', function() {
+          const password = document.getElementById('password').value;
+          const correctPassword = 'mrgdv123'; // Replace with the actual correct password
+
+          if (password === correctPassword) {
+              document.cookie = "loggedIn=true; path=/; max-age=3600"; // Cookie expires in 1 hour
+              window.location.href = '/list.html';
+          } else {
+              alert('Incorrect password. Please try again.');
+          }
+      });
+  </script></body>
+</html>

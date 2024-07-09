@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notifications Page</title>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#notifications {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.notification {
+  background-color: #f9f9f9;
+  border: 1px solid #e7e7e7;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.notification-content {
+  font-size: 14px;
+  color: #333;
+}
+
+#loadMore {
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+ul {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul.styled-list {
+    list-style-type: number;
+    padding: 2px; /* Padding around the list */
+            background-color: #e0e0e0; /* Background color of the list */
+            border-radius: 10px; /* Rounded corners */
+            max-width: 500px; /* Maximum width of the list */
+            margin: 0 auto; /* Center the list horizontally */
+        }
+        
+        ul.styled-list li {
+            padding: 10px; /* Padding for each list item */
+            margin: 5px 0; /* Margin between list items */
+            background-color: #ffffff; /* Background color of list items */
+            border: 1px solid #ccc; /* Border around each list item */
+            border-radius: 5px; /* Rounded corners for list items */
+            display: flex; /* Flexbox layout for list items */
+            align-items: center; /* Center items vertically */
+            list-style-type: number;
+        }
+        
+        ul.styled-list li::before {
+            content: "➡️"; /* Unicode for bullet */
+            color: #ff6347; /* Color of the bullet */
+            font-size: 20px; /* Size of the bullet */
+            margin-right: 10px; /* Space between bullet and text */
+        }
+    </style>
+</style></head>
+<body>
+<div id="notifications">
+  <h2 class="title">Notifications</h2> <hr>
+  <div id="notifications-list">
+    <!-- Notifications will be loaded here -->
+
+    <ul class="styled-list">
+        <li>Biology Upload has started✅ &nbsp; <a href="/bio/11th/11thbio.html"><button>OPEN</button></a></li>
+    </ul>
+
+</div>
+</div>
+</body> <script>
+    
+</script>
+</html>
